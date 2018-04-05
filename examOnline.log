@@ -1,0 +1,8 @@
+2018-04-05 12:32:05.369  INFO 532 --- [main] cheyinshu.OnlineExamApplication          : Starting OnlineExamApplication on Lenovo-PC with PID 532 (D:\2018\OnlineExam\target\classes started by 1 in D:\2018\OnlineExam)
+2018-04-05 12:32:05.460 DEBUG 532 --- [main] cheyinshu.OnlineExamApplication          : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-04-05 12:32:05.462  INFO 532 --- [main] cheyinshu.OnlineExamApplication          : No active profile set, falling back to default profiles: default
+2018-04-05 12:32:18.918  INFO 532 --- [main] cheyinshu.OnlineExamApplication          : Started OnlineExamApplication in 15.101 seconds (JVM running for 18.781)
+2018-04-05 12:35:28.316  INFO 9524 --- [main] cheyinshu.OnlineExamApplication          : Starting OnlineExamApplication on Lenovo-PC with PID 9524 (D:\2018\OnlineExam\target\classes started by 1 in D:\2018\OnlineExam)
+2018-04-05 12:35:28.322 DEBUG 9524 --- [main] cheyinshu.OnlineExamApplication          : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2018-04-05 12:35:28.325  INFO 9524 --- [main] cheyinshu.OnlineExamApplication          : No active profile set, falling back to default profiles: default
+2018-04-05 12:35:38.640  INFO 9524 --- [main] cheyinshu.OnlineExamApplication          : Started OnlineExamApplication in 11.114 seconds (JVM running for 12.562)

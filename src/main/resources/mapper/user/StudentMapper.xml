@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="witparking.dao.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="cheyinshu.exam.models.user.Student">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="college_class" jdbcType="VARCHAR" property="collegeClass" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="institute" jdbcType="VARCHAR" property="institute" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="student_no" jdbcType="VARCHAR" property="studentNo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="usertype" jdbcType="BIT" property="usertype" />
+    <result column="extend_info" jdbcType="VARCHAR" property="extendInfo" />
+    <result column="is_delete" jdbcType="BIT" property="isDelete" />
+  </resultMap>
+</mapper>

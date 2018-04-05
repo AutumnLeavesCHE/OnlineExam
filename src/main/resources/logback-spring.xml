@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <!--JMX管理，logback支持使用JMX随时重载logback.xml或者单独设置某个package的level-->
+    <jmxConfigurator/>
+
+    <!--appender
+appender 是负责写日志的组件，常用的组件有：
+ConsoleAppender
+FileAppender
+RollingFileAppender
+
+ConsoleAppender
+控制台日志组件，该组件将日志信息输出到控制台,该组件有以下节点
+
+encoder：对日志进行格式化
+target：System.out 或者 System.err，默认是 System.out-->
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%date [%level] [%thread] %logger{60} [%file : %line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+    滚动记录文件日志组件，先将日志记录记录到指定文件，当符合某个条件时，将日志记录到其他文件，该组件有以下节点
+
+file：文件名
+encoder：格式化
+rollingPolicy：当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名
+triggeringPolicy：告知 RollingFileAppender 合适激活滚动
+prudent：当为true时，不支持FixedWindowRollingPolicy。支持TimeBasedRollingPolicy，但是有两个限制，1不支持也不允许文件压缩，2不能设置file属性，必须留空。
+ -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}${LOG_FILE}</File>
+        <encoder>
+            <pattern>%date [%level] [%thread] %logger{60} [%file : %line] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}daily/${LOG_FILE}.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>15</maxHistory><!--  保留15天日志 -->
+        </rollingPolicy>
+    </appender>
+    <!--各个模块的日志级别-->
+    <logger name="org.springframework" level="error"/>
+    <logger name="jdbc.connection" level="OFF"/>
+    <logger name="org.apache" level="error"/>
+    <logger name="cheyinshu" level="debug"/>
+    <logger name="cheyinshu.dao.mapper" level="debug"/>
+
+    <root level="error">
+        <!--<appender-ref ref="Console"/>-->
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
